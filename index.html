@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isabelly | 15 Anos</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Loading -->
+<div id="loading">
+  <h2>Carregando convite...</h2>
+</div>
+
+<!-- Tela inicial -->
+<section id="opening" class="screen active">
+  <img src="assets/envelope.png" class="envelope" id="envelope">
+  <p>Clique para abrir seu convite ✨</p>
+</section>
+
+<!-- Vídeo -->
+<section id="videoScreen" class="screen">
+  <video id="openingVideo" preload="auto">
+    <source src="assets/opening.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- Música -->
+<audio id="bgMusic" loop>
+  <source src="assets/music.mp3" type="audio/mp3">
+</audio>
+
+<!-- Convite -->
+<section id="invite" class="screen">
+  <div class="invite-card">
+    <h1>Isabelly</h1>
+    <h2>15 Anos</h2>
+
+    <p class="date">19 de Setembro de 2026</p>
+    <p>19:00H</p>
+    <p>Colibri Country Club - Planaltina GO</p>
+
+    <div class="phrase">
+      Um sonho que se torna realidade,<br>
+      uma noite para recordar para sempre.
+    </div>
+
+    <div class="message">
+      Meus 15 anos chegaram,<br>
+      convido você para fazer parte desta história.
+    </div>
+
+    <div class="buttons">
+      <a href="https://wa.me/5561992959195" target="_blank">
+        <img src="assets/btn-confirmar.svg">
+      </a>
+
+      <a href="https://share.google/awzooLA4ul8FZy1jJ" target="_blank">
+        <img src="assets/btn-local.svg">
+      </a>
+
+      <button id="presentBtn">
+        <img src="assets/btn-presentes.svg">
+      </button>
+
+      <button id="dressBtn">
+        <img src="assets/btn-dress.svg">
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Presentes -->
+<div class="modal" id="presentModal">
+  <div class="modal-box">
+    <span class="close">&times;</span>
+    <h2>Lista de Presentes</h2>
+
+    <ul>
+      <li>Roupas (M) ou 36</li>
+      <li>Calçados 36</li>
+      <li>Maquiagens</li>
+      <li>Acessórios</li>
+      <li>Perfumes</li>
+      <li>Etc...</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Modal Dress -->
+<div class="modal" id="dressModal">
+  <div class="modal-box">
+    <span class="close">&times;</span>
+    <h2>Dress Code</h2>
+
+    <p>Código de vestimenta: <b>Esporte Fino</b></p>
+
+    <h3>Proibidas ❌</h3>
+    <ul>
+      <li>Rosé</li>
+      <li>Rosa</li>
+      <li>Dourado</li>
+    </ul>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
