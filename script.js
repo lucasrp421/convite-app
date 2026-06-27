@@ -1,40 +1,34 @@
-window.onload = () => {
-  document.getElementById("loading").style.display = "none";
-};
-
 const opening = document.getElementById("opening");
 const videoScreen = document.getElementById("videoScreen");
-const invite = document.getElementById("invite");
+const inviteScreen = document.getElementById("inviteScreen");
 
 const envelope = document.getElementById("envelope");
 const video = document.getElementById("openingVideo");
-const music = document.getElementById("bgMusic");
-
-envelope.addEventListener("click", () => {
-  opening.classList.remove("active");
-  videoScreen.classList.add("active");
-
-  music.play();
-  video.play();
-});
-
-video.addEventListener("ended", () => {
-  videoScreen.classList.remove("active");
-  invite.classList.add("active");
-});
 
 const presentBtn = document.getElementById("presentBtn");
 const dressBtn = document.getElementById("dressBtn");
 
-const presentModal = document.getElementById("presentModal");
-const dressModal = document.getElementById("dressModal");
+const modalPresent = document.getElementById("modalPresent");
+const modalDress = document.getElementById("modalDress");
 
-presentBtn.onclick = () => presentModal.style.display = "flex";
-dressBtn.onclick = () => dressModal.style.display = "flex";
-
-document.querySelectorAll(".close").forEach(btn => {
-  btn.onclick = () => {
-    presentModal.style.display = "none";
-    dressModal.style.display = "none";
-  };
+envelope.addEventListener("click", () => {
+    opening.classList.remove("active");
+    videoScreen.classList.add("active");
+    video.play();
 });
+
+video.addEventListener("ended", () => {
+    videoScreen.classList.remove("active");
+    inviteScreen.classList.add("active");
+});
+
+presentBtn.onclick = () => {
+    modalPresent.style.display = "flex";
+};
+
+dressBtn.onclick = () => {
+    modalDress.style.display = "flex";
+};
+
+modalPresent.onclick = () => modalPresent.style.display = "none";
+modalDress.onclick = () => modalDress.style.display = "none";
